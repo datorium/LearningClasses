@@ -10,15 +10,20 @@ namespace LearningClasses
             person.Name = "Jenifer";
             person.Surname = "Lopez";
             person.Age = 16;   
-            Console.WriteLine("Name: " + person.Name + ", Surname: " + person.Surname + ", Age: " + person.Age);
+            person.Introduce();
             person.Talk(); //Jenifer is talking...
+            person.Say("I want to play SCII");
+            person.CalculateSum(3.14, 6);
+            //3.14 + 6 = 9.14;
+            
 
             Human anotherPerson = new Human();
             anotherPerson.Name = "John";
             anotherPerson.Surname = "Nash";
             anotherPerson.Age = 35;
-            Console.WriteLine("Name: " + anotherPerson.Name + ", Surname: " + anotherPerson.Surname + ", Age: " + anotherPerson.Age);
+            anotherPerson.Introduce();
             anotherPerson.Talk(); //John is talking...
+            anotherPerson.Say("I am hungry");
         }
     }
 
@@ -30,7 +35,17 @@ namespace LearningClasses
 
         public void Talk()
         {
-            Console.WriteLine("I am talking...");
+            Console.WriteLine(Name + " is talking...");
+        }
+
+        public void Say(string message)
+        {
+            Console.WriteLine(Name + " says: " + message);
+        }
+
+        public void Introduce()
+        {
+            Console.WriteLine("Hi, my name is " + Name + ", I am " + Age + " years old.");
         }
     }
 }
