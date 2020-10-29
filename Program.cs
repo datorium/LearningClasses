@@ -47,5 +47,12 @@ namespace LearningClasses
         {
             Console.WriteLine("Hi, my name is " + Name + ", I am " + Age + " years old.");
         }
+
+        public void CalculateSum(double first, double second)
+        {
+            double total;
+            total = first + second;
+            Console.WriteLine(first + " + " + second + " = " + total);
+        }
     }
 }
